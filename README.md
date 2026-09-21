@@ -11,41 +11,11 @@ This is a simple **bigram language model**, where the probability of the next ch
 Given names such as:
 
 ```text
-emma
-olivia
+john
+kelvin
 liam
 noah
 ```
-
-the program counts how often one character is followed by another.
-
-For example:
-
-```text
-e -> m
-m -> m
-m -> a
-```
-
-It also adds special tokens to represent the beginning and end of a name:
-
-```text
-<START> -> e
-a -> <END>
-```
-
-These counts are then converted into probabilities.
-
-For example:
-
-```text
-a -> n       0.4
-a -> r       0.3
-a -> l       0.2
-a -> <END>   0.1
-```
-
-When generating a name, the program starts from `<START>` and repeatedly samples the next character until `<END>` is selected.
 
 ## Requirements
 
@@ -65,9 +35,6 @@ Create a text file named `name.txt`.
 Each line should contain one name:
 
 ```text
-emma
-olivia
-ava
 sophia
 liam
 noah
